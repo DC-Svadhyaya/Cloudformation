@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: This template will create Amazon linux EC2 instance
+  
+Resources:
+  myEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      KeyName: CustomVPC
+      ImageId: ami-a4c7edb2
+      InstanceType: t2.micro
+      SecurityGroupIds:
+        - sg-098f5858
+      Tags:
+        - Key: Name
+          Value: Linux Server
